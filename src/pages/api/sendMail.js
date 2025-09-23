@@ -40,7 +40,7 @@ export default async function handler(req, res) {
 
       const info = await transporter.sendMail({
         from: process.env.EMAIL_USER,
-        to: "gabrielnmuller12@gmail.com",
+        to: process.env.EMAIL_TO,
         subject: fields.subject[0],
         text: fields.body[0],
         attachments: attachments,
